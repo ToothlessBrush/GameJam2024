@@ -4,6 +4,8 @@ using System.Collections;
 public class Bandit : MonoBehaviour
 {
 
+    public GameLogicManager GameLogicManager;
+    
     // Serialized fields allow you to set these values from the Unity Editor, 
     // and also keeps them private to the script.
     [SerializeField] float m_speed = 4.0f;            // Movement speed of the bandit
@@ -168,5 +170,6 @@ public class Bandit : MonoBehaviour
     private void killPlayer() {
         m_animator.SetTrigger("Death");
         movement = false;
+        GameLogicManager.characterDeath();
     }
 }
