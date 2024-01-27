@@ -19,9 +19,13 @@ public class Bandit : MonoBehaviour
 
     private bool movement = false;                    // Flag to control the movement of the bandit
 
-    private int health = 1;
+    public int health = 3;
 
     public float backwardForce = 5.0f;
+
+    private bool isInvolnerable = false;
+    public float invulnerabilityDuration = 1.0f;
+    private float invulnerabilityTimer = 0.0f;
 
     // Initialization
     void Start()
@@ -35,10 +39,17 @@ public class Bandit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If movement is disabled, exit the function early
         if (!movement)
         {
             return;
+        }
+        
+        if (isInvolnerable) {
+            invulnerabilityTimer -= Time.deltaTime;
+
+            if (invulnerabilityTimer <= 0) {
+                isInvolnerable = false;
+            }
         }
 
         // Check if the bandit just landed on the ground
@@ -128,16 +139,34 @@ public class Bandit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && !isInvolnerable)
         {
             Debug.Log("hit Enemy");
 
             health--;
-            //move player backwards
-            m_body2d.AddForce(Vector2.left * backwardForce, ForceMode2D.Impulse);
+
+            Debug.Log("health: " + health);
+
+            if (health <= 0) {
+                killPlayer();
+                return;
+            }
+
+            
             m_animator.SetTrigger("Hurt");
+
+            isInvolnerable = true;
+            invulnerabilityTimer = invulnerabilityDuration;
+
+
+
 
             //collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
         }
+    }
+
+    private void killPlayer() {
+        m_animator.SetTrigger("Death");
+        movement = false;
     }
 }
