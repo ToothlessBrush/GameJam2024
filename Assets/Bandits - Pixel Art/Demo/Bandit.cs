@@ -19,6 +19,10 @@ public class Bandit : MonoBehaviour
 
     private bool movement = false;                    // Flag to control the movement of the bandit
 
+    private int health = 1;
+
+    public float backwardForce = 5.0f;
+
     // Initialization
     void Start()
     {
@@ -120,5 +124,20 @@ public class Bandit : MonoBehaviour
     public void setMovement(bool m)
     {
         movement = m;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("hit Enemy");
+
+            health--;
+            //move player backwards
+            m_body2d.AddForce(Vector2.left * backwardForce, ForceMode2D.Impulse);
+            m_animator.SetTrigger("Hurt");
+
+            //collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+        }
     }
 }
