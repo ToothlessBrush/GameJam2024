@@ -21,7 +21,9 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
         }
     }
-
+    void Start(){
+        PauseCanvas.enabled = false;
+    }
     public void PauseGame()
     {
         Time.timeScale = 0;
