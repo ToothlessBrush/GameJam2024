@@ -31,6 +31,8 @@ public class Bandit : MonoBehaviour
     [SerializeField] public int jCount = 1;
     [SerializeField] public int jCountReset = 1;
 
+    public bool Dance = false;
+
     // Initialization
     void Start()
     {
@@ -48,11 +50,22 @@ public class Bandit : MonoBehaviour
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
+
+        if (Dance)
+        {
+            m_animator.SetTrigger("Dance");
+            return;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Dance)
+        {
+            return;
+        }
+
         if (!movement)
         {
             return;
