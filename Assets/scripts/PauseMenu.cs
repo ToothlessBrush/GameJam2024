@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     //public GameObject pausePanel;
     public Canvas PauseCanvas;          // Reference to a PauseCanvas
     // Start is called before the first frame update
-    public AudioSource introAudioSource; // Assign this in the Unity Editor with the intro clip
+    //public AudioSource introAudioSource; // Assign this in the Unity Editor with the intro clip
     
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Start(){
         PauseCanvas.enabled = false;
-        introAudioSource.Play();
+        //introAudioSource.Play();
     }
     public void PauseGame()
     {
