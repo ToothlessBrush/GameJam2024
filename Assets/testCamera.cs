@@ -20,12 +20,16 @@ public class testCamera : MonoBehaviour
 
         
 
-        // Calls a method on the followCamera script to potentially switch the camera's target.
-        followCamera.switchTarget();
+        if (!followCamera.startTargetOnPlayer) {
+            followCamera.switchTarget();
+        }
+        
 
         // Check if the button reference is not null (i.e., has been assigned in the Unity Editor).
         if (button != null)
         {
+            Debug.Log("disabling button");
+            
             // If the button is valid, make it non-interactable to prevent further clicks.
             button.interactable = false;
 
