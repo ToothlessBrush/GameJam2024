@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
 
     public BoxCollider2D fireCollider;
 
+    public bool FireWizard = false;
+
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -22,14 +24,21 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer < chaseRange)
         {
             ChasePlayer();
-            animator.SetBool("IsAttacking", true);
-            fireCollider.enabled = true;
+            
+            if (FireWizard) {
+                animator.SetBool("IsAttacking", true);
+                fireCollider.enabled = true;
+            }
+            
         }
         else
         {
             Patrol();
-            animator.SetBool("IsAttacking", false);
-            fireCollider.enabled = false;
+            if (FireWizard) {
+                animator.SetBool("IsAttacking", false);
+                fireCollider.enabled = false;
+            }
+            
         }
     }
     void ChasePlayer()
