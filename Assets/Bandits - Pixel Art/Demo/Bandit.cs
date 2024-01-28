@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Bandit : MonoBehaviour
@@ -32,6 +32,16 @@ public class Bandit : MonoBehaviour
     // Initialization
     void Start()
     {
+        // Find all objects with the specified tag
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        // Ignore collision with each enemy
+        foreach (GameObject enemy in enemies)
+        {
+            // Ignore collision between this object's collider and the enemy's collider
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
+        }
+        
         // Getting components from the GameObject to which this script is attached
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
