@@ -1847,7 +1847,7 @@ MonoBehaviour:
   playerTarget: {fileID: 1837278438}
   mainMenuTarget: {fileID: 1499161232}
   bandit: {fileID: 1837278443}
-  startTargetOnPlayer: 1
+  startTargetOnPlayer: 0
   testCamera: {fileID: 1499161231}
 --- !u!1 &587742126
 GameObject:
