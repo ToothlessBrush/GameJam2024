@@ -223,6 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &53163682
 GameObject:
@@ -322,6 +324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.4
 --- !u!1 &66736255
 GameObject:
@@ -513,6 +517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.2
 --- !u!1 &120071185
 GameObject:
@@ -778,6 +784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.6
 --- !u!1 &210068599
 GameObject:
@@ -879,6 +887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!1 &247773977
 GameObject:
@@ -978,6 +988,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.2
 --- !u!1 &323083345
 GameObject:
@@ -1281,6 +1293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.7
 --- !u!1 &443919023
 GameObject:
@@ -1380,6 +1394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &448164356
 GameObject:
@@ -1615,6 +1631,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.4
 --- !u!1 &454596814
 GameObject:
@@ -1716,6 +1734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.4
 --- !u!1 &519420028
 GameObject:
@@ -1827,6 +1847,8 @@ MonoBehaviour:
   playerTarget: {fileID: 1837278438}
   mainMenuTarget: {fileID: 1499161232}
   bandit: {fileID: 1837278443}
+  startTargetOnPlayer: 1
+  testCamera: {fileID: 1499161231}
 --- !u!1 &587742126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,6 +1947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.7
 --- !u!1 &656247494
 GameObject:
@@ -2064,6 +2088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!4 &711230204 stripped
 Transform:
@@ -2296,6 +2322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &807017567
 GameObject:
@@ -2463,6 +2491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.9
 --- !u!1 &856826359
 GameObject:
@@ -2736,6 +2766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.9
 --- !u!1 &995140351
 GameObject:
@@ -2925,6 +2957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.8
 --- !u!1001 &1074670747
 PrefabInstance:
@@ -3089,6 +3123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!1 &1157151956
 GameObject:
@@ -3320,6 +3356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.8
 --- !u!1 &1188514709
 GameObject:
@@ -3421,6 +3459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.2
 --- !u!1 &1216661219
 GameObject:
@@ -3650,6 +3690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.3
 --- !u!1 &1286909715
 GameObject:
@@ -3751,6 +3793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.3
 --- !u!1 &1332337640
 GameObject:
@@ -4100,6 +4144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.3
 --- !u!1 &1466797073
 GameObject:
@@ -4623,6 +4669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.9
 --- !u!1 &1656347644
 GameObject:
@@ -5049,6 +5097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.6
 --- !u!1 &1837278434
 GameObject:
@@ -5250,6 +5300,7 @@ MonoBehaviour:
   health: 3
   backwardForce: 25.59
   invulnerabilityDuration: 1
+  jCount: 2
 --- !u!1 &1859131566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,6 +5574,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.6
 --- !u!1 &1900606811
 GameObject:
@@ -5622,6 +5675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.7
 --- !u!114 &1930492835
 MonoBehaviour:
@@ -5818,6 +5873,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
+  yAxis: 0
+  infScroll: 0
   parallaxEffect: 0.8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

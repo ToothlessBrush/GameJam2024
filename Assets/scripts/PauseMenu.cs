@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
         }
     }
-    void Start(){
+    void Start() {
         PauseCanvas.enabled = false;
         introAudioSource.Play();
     }

@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &66736255
 GameObject:
@@ -784,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &448164356
 GameObject:
@@ -1031,6 +1033,8 @@ MonoBehaviour:
   playerTarget: {fileID: 1837278438}
   mainMenuTarget: {fileID: 1499161232}
   bandit: {fileID: 1837278443}
+  startTargetOnPlayer: 1
+  testCamera: {fileID: 1499161231}
 --- !u!1 &531714847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.25
 --- !u!212 &531714850
 SpriteRenderer:
@@ -1180,6 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.25
 --- !u!212 &630655288
 SpriteRenderer:
@@ -1372,6 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 1
 --- !u!1 &807017567
 GameObject:
@@ -2402,6 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseCanvas: {fileID: 1332337644}
+  introAudioSource: {fileID: 0}
 --- !u!1 &1389288386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,6 +3012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.25
 --- !u!212 &1589332909
 SpriteRenderer:
@@ -3106,6 +3115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.75
 --- !u!212 &1623412962
 SpriteRenderer:
@@ -3336,6 +3346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.75
 --- !u!212 &1734461019
 SpriteRenderer:
@@ -3741,6 +3752,7 @@ MonoBehaviour:
   health: 3
   backwardForce: 5
   invulnerabilityDuration: 1
+  jCount: 2
 --- !u!1 &1859131566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +3847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!212 &1860371086
 SpriteRenderer:
@@ -3948,6 +3961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.75
 --- !u!212 &1931505862
 SpriteRenderer:
@@ -4132,6 +4146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!212 &2069864279
 SpriteRenderer:
@@ -4232,6 +4247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 0.4
+  infScroll: 0
   parallaxEffect: 0.5
 --- !u!212 &2143124757
 SpriteRenderer:
