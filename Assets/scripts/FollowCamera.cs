@@ -26,13 +26,25 @@ public class FollowCamera : MonoBehaviour
     // 'currentTarget' keeps track of the camera's current target.
     private Transform currentTarget;
 
+    public bool startTargetOnPlayer = false;
+    public testCamera testCamera;
+
     // Start is called before the first frame update
     void Start()
     {
-        // Initialize the camera's target to be the main menu at the start.
-        currentTarget = mainMenuTarget;
-
-        // Position the camera at the main menu target's position offset by 'offset'.
+        if (startTargetOnPlayer)
+        {
+            Debug.Log("start Target On Player");
+            currentTarget = playerTarget;
+            bandit.setMovement(true);
+            testCamera.playGame();
+        }
+        else
+        {
+            currentTarget = mainMenuTarget;
+            bandit.setMovement(false);
+        }
+        
         transform.position = mainMenuTarget.position + offset;
 
     }

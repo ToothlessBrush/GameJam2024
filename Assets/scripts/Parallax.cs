@@ -7,10 +7,12 @@ public class FitToCamera : MonoBehaviour
 
     // Serialized field to assign the camera from the Unity Editor
     [SerializeField] public GameObject cam;
+    [SerializeField] public float yAxis;
 
+    [SerializeField] public float infScroll;
     // The intensity of the parallax effect
     public float parallaxEffect;
-//assdadesdfhnuijklo;vz
+    //assdadesdfhnuijklo;vz
     void Start()
     {
         // Store the initial x position of the GameObject
@@ -29,17 +31,17 @@ public class FitToCamera : MonoBehaviour
 
         // Set the new position of the GameObject based on the calculated distance.
         // The y position is hard-coded to 1.4f, which might be specific to your game's design.
-        transform.position = new Vector3(startpos + dist, 1.4f, transform.position.z);
+        transform.position = new Vector3(startpos + dist, yAxis, transform.position.z);
 
         // Check if the GameObject has moved a significant distance (more than its length)
         // and reset its start position. This creates an infinite scrolling effect.
         if (temp > startpos + length)
         {
-            startpos += length * 2;
+            startpos += length * infScroll;
         }
         else if (temp < startpos - length)
         {
-            startpos -= length * 2;
+            startpos -= length * infScroll;
         }
     }
 }
