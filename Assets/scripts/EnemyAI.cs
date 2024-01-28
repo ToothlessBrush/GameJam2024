@@ -9,7 +9,11 @@ public class EnemyAI : MonoBehaviour
     public float moveSpeed = 2f;
     public float chaseRange = 5f;
 
+    public Animator animator;
+
     private int currentPoint = 0;
+
+    public BoxCollider2D fireCollider;
 
     void Update()
     {
@@ -17,26 +21,56 @@ public class EnemyAI : MonoBehaviour
 
         if (distanceToPlayer < chaseRange)
         {
-            // Chase the player
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            ChasePlayer();
+            animator.SetBool("IsAttacking", true);
+            fireCollider.enabled = true;
         }
         else
         {
-            // Patrol between points
             Patrol();
+            animator.SetBool("IsAttacking", false);
+            fireCollider.enabled = false;
         }
     }
-
+    void ChasePlayer()
+    {
+        // animator.SetBool("IsAttacking", true);
+        // Chase the player
+        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        FaceTarget(player.position);
+    }
     void Patrol()
     {
-        // Move towards the current patrol point
-        transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPoint].position, moveSpeed * Time.deltaTime);
-
-        // Check if the enemy has reached the current point
-        if (Vector2.Distance(transform.position, patrolPoints[currentPoint].position) < 0.1f)
+        // animator.SetBool("IsAttacking", false);
+        if (patrolPoints != null && patrolPoints.Length > 0 && currentPoint >= 0 && currentPoint < patrolPoints.Length && patrolPoints[currentPoint] != null)
         {
-            // Move to the next patrol point
-            currentPoint = (currentPoint + 1) % patrolPoints.Length;
+            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPoint].position, moveSpeed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, patrolPoints[currentPoint].position) < .675f)
+            {
+                Debug.Log("Reached patrol point: " + currentPoint);
+                currentPoint = (currentPoint + 1) % patrolPoints.Length;
+                Debug.Log("Moving to next patrol point: " + currentPoint + " (Reset to first point if last point reached)");
+            }
         }
+        else
+        {
+            Debug.LogError("Patrol points are not properly assigned or current point is invalid.");
+        }
+        FaceTarget(patrolPoints[currentPoint].position);
+    }
+    void FaceTarget(Vector2 targetPosition)
+    {
+        if (targetPosition.x > transform.position.x)
+        {
+            // Target is to the right, face right
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (targetPosition.x < transform.position.x)
+        {
+            // Target is to the left, face left
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        // No change if target is directly above or below
     }
 }

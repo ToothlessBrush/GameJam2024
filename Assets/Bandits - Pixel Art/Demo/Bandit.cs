@@ -1,11 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Bandit : MonoBehaviour
 {
 
     public GameLogicManager GameLogicManager;
-    
+
     // Serialized fields allow you to set these values from the Unity Editor, 
     // and also keeps them private to the script.
     [SerializeField] float m_speed = 4.0f;            // Movement speed of the bandit
@@ -28,6 +28,7 @@ public class Bandit : MonoBehaviour
     private bool isInvolnerable = false;
     public float invulnerabilityDuration = 1.0f;
     private float invulnerabilityTimer = 0.0f;
+    [SerializeField] public int jCount = 2;
 
     // Initialization
     void Start()
@@ -41,7 +42,7 @@ public class Bandit : MonoBehaviour
             // Ignore collision between this object's collider and the enemy's collider
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), enemy.GetComponent<Collider2D>());
         }
-        
+
         // Getting components from the GameObject to which this script is attached
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
@@ -55,11 +56,13 @@ public class Bandit : MonoBehaviour
         {
             return;
         }
-        
-        if (isInvolnerable) {
+
+        if (isInvolnerable)
+        {
             invulnerabilityTimer -= Time.deltaTime;
 
-            if (invulnerabilityTimer <= 0) {
+            if (invulnerabilityTimer <= 0)
+            {
                 isInvolnerable = false;
             }
         }
@@ -67,6 +70,7 @@ public class Bandit : MonoBehaviour
         // Check if the bandit just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
+            jCount = 2;
             Debug.Log("Grounded");
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
@@ -121,13 +125,17 @@ public class Bandit : MonoBehaviour
             m_combatIdle = !m_combatIdle;
 
         // Jump
-        else if (Input.GetKeyDown("space") && m_grounded)
+        else if (Input.GetKeyDown("space") && jCount > 0)
         {
-            m_animator.SetTrigger("Jump");
-            m_grounded = false;
-            m_animator.SetBool("Grounded", m_grounded);
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
+            if (jCount > 0)
+            {
+                jCount--;
+                m_animator.SetTrigger("Jump");
+                m_grounded = false;
+                m_animator.SetBool("Grounded", m_grounded);
+                m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+                m_groundSensor.Disable(0.2f);
+            }
         }
 
         // Run
@@ -159,12 +167,13 @@ public class Bandit : MonoBehaviour
 
             Debug.Log("health: " + health);
 
-            if (health <= 0) {
+            if (health <= 0)
+            {
                 killPlayer();
                 return;
             }
 
-            
+
             m_animator.SetTrigger("Hurt");
 
             isInvolnerable = true;
@@ -177,7 +186,8 @@ public class Bandit : MonoBehaviour
         }
     }
 
-    private void killPlayer() {
+    private void killPlayer()
+    {
         m_animator.SetTrigger("Death");
         movement = false;
         GameLogicManager.characterDeath();
