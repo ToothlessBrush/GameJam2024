@@ -2845,7 +2845,7 @@ MonoBehaviour:
   button: {fileID: 123186720}
   gameCanvas: {fileID: 1512313729}
   introAudioSource: {fileID: 1055823393}
-  loopAudioSource: {fileID: 1055823393}
+  loopAudioSource: {fileID: 929224085}
 --- !u!4 &1499161232
 Transform:
   m_ObjectHideFlags: 0
