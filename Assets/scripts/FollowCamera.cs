@@ -29,6 +29,9 @@ public class FollowCamera : MonoBehaviour
     public bool startTargetOnPlayer = false;
     public testCamera testCamera;
 
+    public bool RestrictCameraHeight = false;
+    public float RestrictCameraHeightValue = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,14 @@ public class FollowCamera : MonoBehaviour
     {
         // Calculate the desired position of the camera by adding the offset to the current target's position.
         Vector3 targetPosition = currentTarget.position + offset;
+
+        if (RestrictCameraHeight)
+        {
+            if (targetPosition.y > RestrictCameraHeightValue)
+            {
+                targetPosition.y = RestrictCameraHeightValue;
+            }
+        }
 
         // Smoothly move the camera towards the target position.
         // 'transform.position' is the current position of the camera.
