@@ -9,7 +9,11 @@ public class EnemyAI : MonoBehaviour
     public float moveSpeed = 2f;
     public float chaseRange = 5f;
 
+    public Animator animator;
+
     private int currentPoint = 0;
+
+    public BoxCollider2D fireCollider;
 
     void Update()
     {
@@ -18,20 +22,26 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer < chaseRange)
         {
             ChasePlayer();
+            animator.SetBool("IsAttacking", true);
+            fireCollider.enabled = true;
         }
         else
         {
             Patrol();
+            animator.SetBool("IsAttacking", false);
+            fireCollider.enabled = false;
         }
     }
     void ChasePlayer()
     {
+        // animator.SetBool("IsAttacking", true);
         // Chase the player
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         FaceTarget(player.position);
     }
     void Patrol()
     {
+        // animator.SetBool("IsAttacking", false);
         if (patrolPoints != null && patrolPoints.Length > 0 && currentPoint >= 0 && currentPoint < patrolPoints.Length && patrolPoints[currentPoint] != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPoint].position, moveSpeed * Time.deltaTime);
