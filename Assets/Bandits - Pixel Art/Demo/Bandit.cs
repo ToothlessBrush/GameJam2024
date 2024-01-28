@@ -139,7 +139,7 @@ public class Bandit : MonoBehaviour
         movement = m;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy" && !isInvolnerable)
         {
