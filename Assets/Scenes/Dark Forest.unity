@@ -5389,7 +5389,8 @@ MonoBehaviour:
   health: 3
   backwardForce: 25.59
   invulnerabilityDuration: 1
-  jCount: 2
+  jCount: 1
+  jCountReset: 1
 --- !u!1 &1859131566
 GameObject:
   m_ObjectHideFlags: 0

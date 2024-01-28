@@ -28,7 +28,8 @@ public class Bandit : MonoBehaviour
     private bool isInvolnerable = false;
     public float invulnerabilityDuration = 1.0f;
     private float invulnerabilityTimer = 0.0f;
-    [SerializeField] public int jCount = 2;
+    [SerializeField] public int jCount = 1;
+    [SerializeField] public int jCountReset = 1;
 
     // Initialization
     void Start()
@@ -70,7 +71,7 @@ public class Bandit : MonoBehaviour
         // Check if the bandit just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
-            jCount = 2;
+            jCount = jCountReset;
             Debug.Log("Grounded");
             m_grounded = true;
             m_animator.SetBool("Grounded", m_grounded);
@@ -127,7 +128,7 @@ public class Bandit : MonoBehaviour
         // Jump
         else if (Input.GetKeyDown("space") && jCount > 0)
         {
-            if (jCount > 0)
+            if (jCount >= 1)
             {
                 jCount--;
                 m_animator.SetTrigger("Jump");
