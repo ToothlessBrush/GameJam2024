@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cyberpunk.unity
     guid: cdef0931b1a9a8e4ab0e95a00bd49846
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 0ff76bb7ca1f45841a67febfd52d6de3
   m_configObjects: {}
