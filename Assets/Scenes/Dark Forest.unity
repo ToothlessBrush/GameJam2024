@@ -4962,7 +4962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8b435a8dc3f604e9a13c4acd7081c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameLogicManager: {fileID: 0}
+  GameLogicManager: {fileID: 1930492835}
   m_speed: 3.5
   m_jumpForce: 5
   health: 3
@@ -5180,7 +5180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a4bebb1018b404497c50c684be1304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathCanvas: {fileID: 0}
+  delay: 2
 --- !u!1 &1933483885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +5319,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1965048444}
   - component: {fileID: 1930492835}
-  - component: {fileID: 1965048441}
   - component: {fileID: 1965048442}
   - component: {fileID: 1965048443}
   m_Layer: 0
@@ -5329,23 +5328,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1965048441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965048438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1965048442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5368,7 +5350,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1965048443
 Canvas:
   m_ObjectHideFlags: 0
@@ -5522,5 +5504,5 @@ SceneRoots:
   - {fileID: 922967867}
   - {fileID: 807017570}
   - {fileID: 1499161232}
-  - {fileID: 1752728719}
   - {fileID: 66736258}
+  - {fileID: 1752728719}
