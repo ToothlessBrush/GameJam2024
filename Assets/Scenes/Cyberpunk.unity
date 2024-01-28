@@ -1031,6 +1031,8 @@ MonoBehaviour:
   playerTarget: {fileID: 1837278438}
   mainMenuTarget: {fileID: 1499161232}
   bandit: {fileID: 1837278443}
+  startTargetOnPlayer: 1
+  testCamera: {fileID: 1499161231}
 --- !u!1 &581488223
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,6 +3629,7 @@ MonoBehaviour:
   health: 3
   backwardForce: 25.59
   invulnerabilityDuration: 1
+  jCount: 2
 --- !u!1 &1859131566
 GameObject:
   m_ObjectHideFlags: 0
