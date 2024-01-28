@@ -8,6 +8,8 @@ public class FitToCamera : MonoBehaviour
     // Serialized field to assign the camera from the Unity Editor
     [SerializeField] public GameObject cam;
     [SerializeField] public float yAxis;
+
+    [SerializeField] public float infScroll;
     // The intensity of the parallax effect
     public float parallaxEffect;
     //assdadesdfhnuijklo;vz
@@ -35,11 +37,11 @@ public class FitToCamera : MonoBehaviour
         // and reset its start position. This creates an infinite scrolling effect.
         if (temp > startpos + length)
         {
-            startpos += length * 2;
+            startpos += length * infScroll;
         }
         else if (temp < startpos - length)
         {
-            startpos -= length * 2;
+            startpos -= length * infScroll;
         }
     }
 }

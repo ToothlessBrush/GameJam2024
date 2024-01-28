@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
+  infScroll: 1.4
   parallaxEffect: 1
 --- !u!1 &323083345
 GameObject:
@@ -918,6 +919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
+  infScroll: 1.4
   parallaxEffect: 1
 --- !u!1 &519420028
 GameObject:
@@ -1296,7 +1298,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
-  parallaxEffect: 0.66
+  infScroll: 1.4
+  parallaxEffect: 0.45
 --- !u!1 &807017567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
+  infScroll: 1.4
   parallaxEffect: 1
 --- !u!1 &856826359
 GameObject:
@@ -1893,6 +1897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
+  infScroll: 1.4
   parallaxEffect: 1
 --- !u!1 &1157151956
 GameObject:
@@ -2455,6 +2460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
+  infScroll: 1.4
   parallaxEffect: 1
 --- !u!212 &1434185453
 SpriteRenderer:
@@ -3356,7 +3362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
-  parallaxEffect: 0.66
+  infScroll: 1.4
+  parallaxEffect: 0.45
 --- !u!1 &1837278434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3778,7 +3785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
-  parallaxEffect: 0.33
+  infScroll: 1.975
+  parallaxEffect: 0.1
 --- !u!212 &1895775534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3880,7 +3888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
-  parallaxEffect: 0.66
+  infScroll: 1.4
+  parallaxEffect: 0.45
 --- !u!212 &1909200089
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4257,7 +4266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   yAxis: 1.4
-  parallaxEffect: 0.33
+  infScroll: 1.975
+  parallaxEffect: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
