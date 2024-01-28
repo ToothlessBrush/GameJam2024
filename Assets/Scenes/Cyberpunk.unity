@@ -2562,7 +2562,7 @@ GameObject:
   - component: {fileID: 1496488680}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3138,6 +3138,8 @@ MonoBehaviour:
   player: {fileID: 1837278438}
   moveSpeed: 2.35
   chaseRange: 6.375
+  animator: {fileID: 0}
+  fireCollider: {fileID: 0}
 --- !u!50 &1752728723
 Rigidbody2D:
   serializedVersion: 4
@@ -3467,6 +3469,7 @@ MonoBehaviour:
   backwardForce: 25.59
   invulnerabilityDuration: 1
   jCount: 2
+  jCountReset: 1
 --- !u!1 &1859131566
 GameObject:
   m_ObjectHideFlags: 0
